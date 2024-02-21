@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:ignore="HardcodedText"
+    tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:id="@+id/workingsTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:lines="2"
+            android:maxLines="2"
+            android:textColor="@color/white"
+            android:textAlignment="textEnd"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/resultsTV"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/resultsTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textAlignment="textEnd"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            style="@style/buttonOperator3"
+            android:textColor="@color/black"
+            android:onClick="allClearAction"
+            android:textSize="23dp"
+            android:textAlignment="center"
+            android:text="C"/>
+        <Button
+            style="@style/buttonOperator3"
+            android:textColor="@color/black"
+            android:textSize="23dp"
+            android:onClick="backSpaceAction"
+            android:text="⌫"/>
+        <Button
+            style="@style/buttonOperator3"
+            android:textColor="@color/black"
+            android:textSize="23dp"
+            android:onClick="toggleSign"
+            android:text="-/+"/>
+        <Button
+            style="@style/buttonOperator3"
+            android:textColor="@color/black"
+            android:textSize="23dp"
+            android:onClick="toggleSign"
+            android:text="-/+"/>
+        <Button
+            style="@style/buttonOperator3"
+            android:textColor="@color/black"
+            android:textSize="23dp"
+            android:onClick="toggleSign"
+            android:text="-/+"/>
+        <Button
+            style="@style/buttonOperator"
+            android:textAlignment="center"
+            android:textSize="23dp"
+            android:text="/"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+        <Button
+            android:text="%"
+            android:onClick="percentageAction"
+            app:layout_constraintTop_toBottomOf="@+id/equalsButton"
+            app:layout_constraintStart_toStartOf="@+id/equalsButton"
+            app:layout_constraintEnd_toEndOf="@+id/equalsButton"
+            style="@style/buttonOperator3"
+            android:textColor="@color/black"
+            android:textSize="23dp"/>
+        <Button
+            style="@style/buttonOperator3"
+            android:text="√"
+            android:onClick="squareRootAction"
+            app:layout_constraintTop_toBottomOf="@+id/percentageButton"
+            app:layout_constraintStart_toStartOf="@+id/percentageButton"
+            app:layout_constraintEnd_toEndOf="@+id/percentageButton"
+            android:textColor="@color/black"
+            android:textSize="23dp"/>
+
+
+        <Button
+            style="@style/buttonNumber"
+            android:text="7"
+            android:textSize="23dp"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="8"
+            android:textSize="23dp"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="9"
+            android:textSize="23dp"/>
+        <Button
+            style="@style/buttonOperator"
+            android:text="×"
+            android:textSize="23dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            style="@style/buttonOperator3"
+            android:textColor="@color/black"
+            android:textSize="23dp"
+            android:text="sin"
+            android:onClick="sinAction"
+            app:layout_constraintTop_toBottomOf="@+id/closeParenthesesButton"
+            app:layout_constraintStart_toStartOf="@+id/closeParenthesesButton"
+            app:layout_constraintEnd_toEndOf="@+id/closeParenthesesButton" />
+
+        <Button
+            style="@style/buttonOperator3"
+            android:textColor="@color/black"
+            android:textSize="23dp"
+            android:text="cos"
+            android:onClick="cosAction"
+            app:layout_constraintTop_toBottomOf="@+id/sinButton"
+            app:layout_constraintStart_toStartOf="@+id/sinButton"
+            app:layout_constraintEnd_toEndOf="@+id/sinButton"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="4"
+            android:textSize="23dp"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="5"
+            android:textSize="23dp"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="6"
+            android:textSize="23dp"/>
+        <Button
+            style="@style/buttonOperator"
+            android:text="-"
+            android:textSize="23dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            style="@style/buttonOperator3"
+            android:text="tan"
+            android:onClick="tanAction"
+            app:layout_constraintTop_toBottomOf="@+id/closeParenthesesButton"
+            app:layout_constraintStart_toStartOf="@+id/closeParenthesesButton"
+            app:layout_constraintEnd_toEndOf="@+id/closeParenthesesButton"
+            android:textColor="@color/black"
+            android:textSize="23dp"/>
+
+        <Button
+            style="@style/buttonOperator3"
+            android:text="cot"
+            android:onClick="cotAction"
+            app:layout_constraintTop_toBottomOf="@+id/tanButton"
+            app:layout_constraintStart_toStartOf="@+id/tanButton"
+            app:layout_constraintEnd_toEndOf="@+id/tanButton"
+            android:textColor="@color/black"
+            android:textSize="23dp"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="1"
+            android:textSize="23dp"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="2"
+            android:textSize="23dp"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="3"
+            android:textSize="23dp"/>
+        <Button
+            style="@style/buttonOperator"
+            android:text="+"
+            android:textSize="23dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+        <Button
+            style="@style/buttonNumber"
+            android:text="0"
+            android:layout_weight="2"
+            android:textSize="23dp"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="0"
+            android:layout_weight="2"
+            android:textSize="23dp"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="."
+            android:textSize="23dp"/>
+
+        <Button
+            style="@style/buttonOperator"
+            android:id="@+id/equalsButton"
+            android:text="="
+            android:textSize="23dp"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

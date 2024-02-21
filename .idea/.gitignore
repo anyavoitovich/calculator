@@ -1,0 +1,17 @@
+# Игнорировать файлы и директории, связанные с настройками проекта и среды разработки
+.idea/
+.gradle/
+/local.properties
+/.idea/workspace.xml
+/.idea/tasks.xml
+/.idea/gradle.xml
+/.idea/libraries
+
+# Игнорировать файлы сборки и временные файлы
+/build/
+/captures/
+/app/*/build/
+/out/
+/builds/# Default ignored files
+/shelf/
+/workspace.xml
